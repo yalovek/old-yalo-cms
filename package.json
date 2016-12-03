@@ -1,0 +1,14 @@
+{
+  "name": "yalo-cms",
+  "version": "1.0.0",
+  "description": "Yalo CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CMS"
+  ],
+  "author": "Vadim Yalovenko <yalovek@ya.ru>",
+  "license": "MIT"
+}
