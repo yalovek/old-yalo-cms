@@ -1,0 +1,17 @@
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+# A page
+type Page implements Node {
+  # The ID of an object
+  id: ID!
+  name: String!
+  components: String!
+}
+
+type Query {
+  viewer(name: String!): Page
+}
