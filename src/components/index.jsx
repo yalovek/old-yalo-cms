@@ -4,11 +4,13 @@ import Helmet from 'react-helmet';
 import App from './app';
 
 export default {
-  app(html) {
-    console.log(html)
-    return <App {...html} />;
+  app(data) {
+    return <App html={data} />;
   },
-  head(head, key) {
-    return <Helmet {...head} key={key} />;
-  }
+  head(data, key) {
+    return <Helmet {...data} key={key} />;
+  },
+  renderHtml(data, key) {
+    return <div {...data} key={key} />;
+  },
 };
