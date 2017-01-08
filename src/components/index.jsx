@@ -5,7 +5,7 @@ import App from './app';
 
 export default {
   app(data) {
-    return <App html={data} />;
+    return <App {...data} />;
   },
   head(data, key) {
     return <Helmet {...data} key={key} />;

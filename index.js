@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import express from 'express';
 import Relay from 'react-relay';
 import expressGraphQL from 'express-graphql';
+import { StyleSheetServer } from 'aphrodite';
 import IsomorphicRouter from 'isomorphic-relay-router';
 import { match } from 'react-router';
 import { renderToString } from 'react-dom/server';
@@ -29,7 +30,15 @@ app.use('/graphql', expressGraphQL(req => ({
 function render(res) {
   return ({ props }) => {
     res.status(200).send(`<!doctype html>${
-      renderToString(components.app(renderToString(IsomorphicRouter.render(props))))
+      renderToString(
+        components.app(
+          StyleSheetServer.renderStatic(
+            () => renderToString(
+              IsomorphicRouter.render(props),
+            ),
+          ),
+        ),
+      )
     }`);
   };
 }

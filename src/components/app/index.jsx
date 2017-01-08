@@ -12,6 +12,7 @@ class Component extends React.Component {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {head.title.toComponent()}
         {head.meta.toComponent()}
+        <style data-aphrodite>{this.props.css.content}</style>
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{__html: this.props.html}}></div>

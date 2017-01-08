@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { css } from 'aphrodite';
+import styles from './styles';
 
 function Header() {
-  return <header className="header">
+  return <header className={css(styles.header)}>
     <div className="row">
       <div className="row__col row__col_size_6">
-        <Link to="/" className="header__logo">
+        <Link to="/" className={css(styles.header__logo)}>
           <img src="logo.svg" alt="CouponAd" className="logo" />
         </Link>
       </div>
