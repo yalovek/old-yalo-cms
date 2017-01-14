@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import styles from './styles';
 
 class Component extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class Component extends React.Component {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {head.title.toComponent()}
         {head.meta.toComponent()}
+        <style>{styles}</style>
         <style data-aphrodite>{this.props.css.content}</style>
       </head>
       <body>
