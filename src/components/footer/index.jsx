@@ -4,6 +4,7 @@ import { css } from 'aphrodite';
 import styles from './styles';
 import { Grid, GridItem } from '../grid';
 import Logo from '../logo';
+import { List, ListItem } from '../list';
 
 function Component() {
   return <footer className={css(styles.footer)}>
@@ -15,39 +16,35 @@ function Component() {
       </GridItem>
 
       <GridItem>
-        <ul className="list">
-          <li className="list__item">
+        <List>
+          <ListItem>
             <b>телефон: </b>
             <a className={css(styles.link)} href="tel:88001234567">8 (800) 123-45-67</a>
-          </li>
+          </ListItem>
 
-          <li className="list__item">
+          <ListItem>
             <b>email: </b>
-            <a className="footer__link" href="mailto:mail@couponad.ru">mail@couponad.ru</a>
-          </li>
+            <a className={css(styles.link)} href="mailto:mail@couponad.ru">mail@couponad.ru</a>
+          </ListItem>
 
-          <li className="list__item">
+          <ListItem>
             <b>адрес: </b>
-            <address className="address">Санкт-Петербург</address>
-          </li>
-        </ul>
+            <address className={css(styles.address)}>Санкт-Петербург</address>
+          </ListItem>
+        </List>
       </GridItem>
 
       <GridItem>
         <b className={css(styles.social_title)}>Мы в социальных сетях</b>
 
-        <ul className="list list_type_inline">
-          <li className="list__item">
-            <a className={css(styles.link)} href="https://vk.com" target="_blank">
-              <span className="icon icon_name_vk fa fa-vk fa-2x"></span>
-            </a>
-          </li>
-          <li className="list__item">
-            <a className={css(styles.link)} href="https://instagram.com" target="_blank">
-              <span className="icon icon_name_instagram fa fa-instagram fa-2x"></span>
-            </a>
-          </li>
-        </ul>
+        <List>
+          <ListItem>
+            <a className={css(styles.link)} href="https://vk.com" target="_blank">vk</a>
+          </ListItem>
+          <ListItem>
+            <a className={css(styles.link)} href="https://instagram.com" target="_blank">instagram</a>
+          </ListItem>
+        </List>
       </GridItem>
     </Grid>
   </footer>;

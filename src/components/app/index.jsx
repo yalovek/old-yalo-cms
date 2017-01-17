@@ -17,7 +17,7 @@ class Component extends React.Component {
         <style data-aphrodite>{this.props.css.content}</style>
       </head>
       <body>
-        <div id="app" dangerouslySetInnerHTML={{__html: this.props.html}}></div>
+        <div className="app" id="app" dangerouslySetInnerHTML={{__html: this.props.html}}></div>
       </body>
     </html>;
   }

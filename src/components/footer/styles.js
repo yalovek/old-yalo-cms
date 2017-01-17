@@ -28,6 +28,11 @@ export default StyleSheet.create({
     },
   },
 
+  address: {
+    display: 'inline-block',
+    fontStyle: 'normal',
+  },
+
   social_title: {
     display: 'block',
     marginBottom: '10px',

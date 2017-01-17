@@ -15,7 +15,7 @@ function Component() {
         </Link>
       </GridItem>
 
-      <GridItem>
+      <GridItem size="2">
         <Navigation className={css(styles.navigation)} />
       </GridItem>
     </Grid>
